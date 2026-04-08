@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 
 const app = express();
 
@@ -8,5 +7,7 @@ app.listen(3000, () => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    console.log("Request",req);
+    console.log("Response",res);
+    res.send("I'm alive!");
 });
